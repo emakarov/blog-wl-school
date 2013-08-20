@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<style>
+p img{
+ width:100%;
+ margin-left:0%;
+ margin-bottom:20px;
+ margin-top:20px;
+}
+</style>
+{% endblock %}
+{% block wrapper %}
+  <div class="container" style="background:#fff;padding-top:20px;padding-bottom:40px">
+    <div class="row">
+      <div class="col-md-12">
+        <div style="margin-bottom:40px">
+          <center>
+          <h2 style="color:#27ae60">{{ article.title }}</h2>
+          <div style="font-size:16px;color:#2c3e50">
+            {{ article.small_title }}
+          </div>
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top:20px;font-size:16px;color:#2c3e50">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+      <div style="padding:10px;text-align:justify">
+      {{ article.text|safe }}
+      <br>
+      <br>
+      <br>
+      </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+   <div class="container" style="background:#ecf0f1;padding:20px 20px 40px;">
+   </div>
+{% endblock %}
